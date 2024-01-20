@@ -2,7 +2,7 @@ services:
   web-apps:
     build: ./apps
     container_name: web-apps
-    image: image-rifqi
+    image: rifqidev/image-rifqi
     ports:
       - 5000:3000
     volumes:
