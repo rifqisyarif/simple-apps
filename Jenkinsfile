@@ -18,7 +18,7 @@ pipeline {
         stage('Copy env') {
             steps {
                 sh '''
-                sudo cp /root/simple-apps/apps/env apps/
+                sudo cp /root/simple-apps/apps/.env apps/
                 '''
             }
         }
@@ -28,7 +28,7 @@ pipeline {
                 sh '''
                 cd apps
                 npm test
-                npm test:coverage
+                npm run test:coverage
                 '''
             }
         }
