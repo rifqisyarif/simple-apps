@@ -44,7 +44,9 @@ pipeline {
 
         stage('Dockerized') {
             steps {
-                echo "Proses dockerized apps"
+                sh '''
+                docker compose build
+                '''
             }
         }
 
